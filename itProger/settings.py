@@ -1,4 +1,5 @@
 import os
+import django_heroku
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -130,3 +131,5 @@ STATICFILES_DIRS = [
 
 LOGIN_REDIRECT_URL = 'profile'
 LOGIN_URL = 'user'
+
+django_heroku.settings(locals())
